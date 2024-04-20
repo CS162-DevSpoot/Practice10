@@ -28,31 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox = new ListBox();
+            employeeForm_Button = new Button();
+            dormMeal_Button = new Button();
             SuspendLayout();
             // 
-            // listBox
+            // employeeForm_Button
             // 
-            listBox.ItemHeight = 15;
-            listBox.Location = new Point(12, 12);
-            listBox.Name = "listBox";
-            listBox.Size = new Size(536, 424);
-            listBox.TabIndex = 0;
+            employeeForm_Button.Location = new Point(12, 12);
+            employeeForm_Button.Name = "employeeForm_Button";
+            employeeForm_Button.Size = new Size(233, 23);
+            employeeForm_Button.TabIndex = 0;
+            employeeForm_Button.Text = "Employee Form";
+            employeeForm_Button.UseVisualStyleBackColor = true;
+            employeeForm_Button.Click += employeeForm_Button_Click;
+            // 
+            // dormMeal_Button
+            // 
+            dormMeal_Button.Location = new Point(12, 41);
+            dormMeal_Button.Name = "dormMeal_Button";
+            dormMeal_Button.Size = new Size(233, 23);
+            dormMeal_Button.TabIndex = 1;
+            dormMeal_Button.Text = "Dorm and Meal  Form";
+            dormMeal_Button.UseVisualStyleBackColor = true;
+            dormMeal_Button.Click += dormMeal_Button_Click;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(562, 450);
-            Controls.Add(listBox);
+            ClientSize = new Size(257, 321);
+            Controls.Add(dormMeal_Button);
+            Controls.Add(employeeForm_Button);
             Name = "Main";
             Text = "Main";
-            Load += onForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private ListBox listBox;
+        private Button employeeForm_Button;
+        private Button dormMeal_Button;
     }
 }

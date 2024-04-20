@@ -1,4 +1,4 @@
-﻿namespace CS162_Practice10
+﻿namespace CS162_Practice10.Apps.Employee
 {
     internal class Employee
     {

@@ -1,3 +1,6 @@
+using CS162_Practice10.Apps.DormMealPlan;
+using CS162_Practice10.Apps.Employee;
+
 namespace CS162_Practice10
 {
     public partial class Main : Form
@@ -7,23 +10,18 @@ namespace CS162_Practice10
             InitializeComponent();
         }
 
-        List<Employee> employees = new List<Employee>();
-
-        private void onForm_Load(object sender, EventArgs e)
+        private void employeeForm_Button_Click(object sender, EventArgs e)
         {
-            employees.Add(new Employee("Susan Meyers", 47899, "Accounting", "Vice President"));
-            employees.Add(new Employee("Mark Jones", 39119, "IT", "Programmer"));
-            employees.Add(new Employee("Joy Rodgers", 8177, "Manufacturing", "Enineer"));
+            Form employeeForm = new EmployeeForm();
+            employeeForm.ShowDialog();
 
-            int index = 1;
-            employees.ForEach(e => {
-                listBox.Items.Add($"Object {index} \n");
-                listBox.Items.Add($"\t Name: {e.Name}");
-                listBox.Items.Add($"\t ID: {e.IdNumber}");
-                listBox.Items.Add($"\t Dept: {e.Department}");
-                listBox.Items.Add($"\t Position: {e.Position}");
-                index += 1;
-            });
+        }
+
+        private void dormMeal_Button_Click(object sender, EventArgs e)
+        {
+            Form dormMealForm = new DormMealPlanForm();
+            dormMealForm.ShowDialog();
+
         }
     }
 }
