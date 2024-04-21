@@ -1,5 +1,6 @@
 using CS162_Practice10.Apps.DormMealPlan;
 using CS162_Practice10.Apps.Employee;
+using CS162_Practice10.Apps.AreaClass;
 
 namespace CS162_Practice10
 {
@@ -22,6 +23,17 @@ namespace CS162_Practice10
             Form dormMealForm = new DormMealPlanForm();
             dormMealForm.ShowDialog();
 
+        }
+
+        private void areaClass_Button_Click(object sender, EventArgs e)
+        {
+            Form areaClass = new AreaClassForm();
+            areaClass.ShowDialog();
+        }
+
+        private void exit_Button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
